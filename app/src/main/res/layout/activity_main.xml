@@ -17,7 +17,8 @@
         app:layout_constraintDimensionRatio="w,16:9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/descriptionAvatar"/>
 
     <TextView
         android:id="@+id/lblName"
@@ -82,6 +83,7 @@
         app:layout_constraintEnd_toStartOf="@+id/txtPhonenumber"
         app:layout_constraintStart_toEndOf="@+id/txtEmail"
         app:layout_constraintTop_toBottomOf="@+id/lblEmail"
+        android:contentDescription="@string/descriptionEmail"
         app:srcCompat="@drawable/ic_email_24dp" />
 
     <TextView
@@ -118,6 +120,7 @@
         android:tint="@color/color_state_selector"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/txtPhonenumber"
+        android:contentDescription="@string/descriptionPhone"
         app:srcCompat="@drawable/ic_call_24dp" />
 
     <TextView
@@ -177,7 +180,8 @@
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgEmail"
-        app:srcCompat="@drawable/ic_map_24dp" />
+        app:srcCompat="@drawable/ic_map_24dp"
+        android:contentDescription="@string/descriptionAddres"/>
 
     <ImageView
         android:id="@+id/imgWeb"
@@ -187,7 +191,8 @@
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgAddress"
-        app:srcCompat="@drawable/ic_web_24dp" />
+        app:srcCompat="@drawable/ic_web_24dp"
+        android:contentDescription="@string/descriptionWeb"/>
 
     <TextView
         android:id="@+id/lblAvatar"
@@ -195,7 +200,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="196dp"
         android:layout_marginEnd="16dp"
-        android:text="Nada"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imgAvatar" />
 

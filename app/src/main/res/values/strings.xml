@@ -15,5 +15,10 @@
     <string name="lblEmail">Email</string>
     <string name="txtName">(name)</string>
     <string name="lblName">Name</string>
+    <string name="descriptionPhone">icon phone</string>
+    <string name="descriptionEmail">icon email</string>
+    <string name="descriptionAddres">icon address</string>
+    <string name="descriptionWeb">icon web</string>
+    <string name="descriptionAvatar">image of avatar</string>
     <!-- END DO NOT TOUCH -->
 </resources>
