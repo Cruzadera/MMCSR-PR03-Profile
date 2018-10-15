@@ -55,7 +55,6 @@ public class MainActivityTest {
         onView(withId(R.id.lblName)).check(
                 matches(withBoldTypeface(Typeface.DEFAULT_BOLD.isBold())));
     }
-
     @Test
     public void shouldAvatarHasDefaultOneInitially() {
         Avatar avatar = Database.getInstance().getDefaultAvatar();
