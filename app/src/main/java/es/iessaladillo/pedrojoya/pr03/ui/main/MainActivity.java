@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initViews();
+        // QUITA LOS COMENTARIOS TODO CUANDO LOS IMPLEMENTES
         // TODO
     }
 
@@ -80,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
         imgWeb = ActivityCompat.requireViewById(this, R.id.imgWeb);
 
         //Initially
+        // CREA UN MÉTODO
         lblName.setTypeface(Typeface.DEFAULT_BOLD);
         txtName.requestFocus();
         imgAvatar.setImageResource(Database.getInstance().getDefaultAvatar().getImageResId());
@@ -91,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
         imgAvatar.setOnClickListener(l -> changeProfile());
         lblAvatar.setOnClickListener(l -> changeProfile());
 
+        // TIENES CÓDIGO SIMILAR PARA TODOS LOS setOnFocusChangeListener. CREA UN MÉTODO.
         txtName.setOnFocusChangeListener((v, hasFocus) -> {
             if (!hasFocus) lblName.setTypeface(Typeface.DEFAULT);
             else lblName.setTypeface(Typeface.DEFAULT_BOLD);
@@ -229,6 +232,8 @@ public class MainActivity extends AppCompatActivity {
         return isValid;
     }
 
+    // YO HABRÍA PASADO UN BOOLEANO CON LA CÓNDICIÓN DE SI ES VÁLIDO O NO. DE ESTA MANERA
+    // TE VALDRÍA PARA TODOS LOS CASOS.
     private boolean checkField(EditText txt, ImageView imageView, Field field) {
         boolean isValid;
         if (field == Field.EMAIL && !ValidationUtils.isValidEmail(txt.getText().toString())) {
@@ -261,6 +266,7 @@ public class MainActivity extends AppCompatActivity {
      **/
 
     private void save() {
+        // YO HARÍA UN MÉTODO isFormValid() O ALGO ASÍ.
         if (checkFieldSimple(txtName) && checkField(txtAddress, imgAddress, Field.ADDRESS) && checkField(txtPhonenumber, imgPhonenumber, Field.PHONENUMBER)
                 && checkField(txtEmail, imgEmail, Field.EMAIL) && checkField(txtWeb, imgWeb, Field.WEB)) {
             KeyboardUtils.hideSoftKeyboard(this);
@@ -271,6 +277,7 @@ public class MainActivity extends AppCompatActivity {
             checkField(txtPhonenumber, imgPhonenumber, Field.PHONENUMBER);
             checkField(txtEmail, imgEmail, Field.EMAIL);
             checkField(txtWeb, imgWeb, Field.WEB);
+            // YO CERRARÍA EL TECLADO ANTES DE MOSTRAR EL SnackBar.
             KeyboardUtils.hideSoftKeyboard(this);
         }
 

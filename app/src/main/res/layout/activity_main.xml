@@ -5,11 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- QUITA LOS COMENTARIOS TODO CUANDO LO HAYAS IMPLEMENTADO -->
+
     <!-- TODO
     Use android:tint="@color/color_state_selector" in ImageViews corresponding to Icons
     Use android:textColor="@color/color_state_selector" in TextViews acting as labels.
     -->
 
+    <!-- SI ESTAS INDICANDO UN RATIO PARA EL ImageView, NO LE DEFINAS UNA ALTURA
+         FIJA. LA GRACIA ES QUE SE CALCULE EN BASE AL RATIO -->
     <ImageView
         android:id="@+id/imgAvatar"
         android:layout_width="0dp"
@@ -20,6 +24,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:contentDescription="@string/descriptionAvatar"/>
 
+    <!-- NO USES LITERALES DE TAMAÑO. DEFINE RECURSOS DE DIMENSIÓN -->
     <TextView
         android:id="@+id/lblName"
         android:layout_width="wrap_content"
@@ -194,6 +199,7 @@
         app:srcCompat="@drawable/ic_web_24dp"
         android:contentDescription="@string/descriptionWeb"/>
 
+    <!-- HAS COLOCADO EL TextView MEDIANTE MÁRGENES. Y SI EL TAMAÑO DE PANTALLA ES DISTINTO? -->
     <TextView
         android:id="@+id/lblAvatar"
         android:layout_width="wrap_content"
